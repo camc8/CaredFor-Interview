@@ -18,6 +18,8 @@
 Now that Valet is installed, ensure the terminal is still on the api folder and run `valet link laravel-api`
 The Laravel application will be live at http://laravel-api.test
 
+- Run `composer install` to install dependencies
+- Migrate the database: `php artisan migrate`
 - To import the CSV file to the database, ensure that `appointments.csv` is located in `api/storage/app/appointments.csv` and run `php artisan caredfor:import`
 - To run the tests: `php artisan test`
 
