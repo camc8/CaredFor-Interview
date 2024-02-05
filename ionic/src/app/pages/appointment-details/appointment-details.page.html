@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/appointments"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Appointment #{{ appointment?.appointment_external_id }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="appointment as appointment;">
+
+    <ion-card-header>
+      <ion-card-title>Appointment #{{ appointment?.appointment_external_id }}</ion-card-title>
+      <ion-card-subtitle> </ion-card-subtitle>
+      <ion-text color="tertiary">
+        <p>{{ appointment.time_formatted }}</p>
+      </ion-text>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-label color="medium"></ion-label>
+
+      <ion-item lines="none">
+        <ion-label>
+          <p>Provider Name: {{ appointment.provider_name }}</p>
+          <p>Provider ID: {{ appointment.provider_external_id }}</p>
+          <p>Location ID: {{ appointment.provider_external_id }}</p>
+          <p>Type: {{ appointment.type }}</p>
+          <p>User ID: {{ appointment.user_external_id }}</p>
+          <p>Meeting ID: {{ appointment.meeting_id }}</p>
+          <p>Meeting Password: {{ appointment.meeting_password }}</p>
+        </ion-label>
+      </ion-item>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>

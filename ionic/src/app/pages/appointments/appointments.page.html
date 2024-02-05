@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Appointments</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Appointments</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list>
+    <ion-item button *ngFor="let item of appointments" [routerLink]="[item.id]">
+      <ion-label class="ion-text-wrap">
+        <h3>Appointment #{{ item.appointment_external_id }}</h3>
+        <p>{{ item.time_formatted }}</p>
+        <p>Provider: {{ item.provider_name }}</p>
+        <p>Type: {{ item.type }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-item *ngIf="isMaxDataLoaded" style="text-align: center;">
+    <ion-label class="ion-text-wrap">
+      <h3>End of results</h3>
+    </ion-label>
+  </ion-item>
+
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadMoreData($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
