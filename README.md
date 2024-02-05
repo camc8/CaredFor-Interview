@@ -4,7 +4,7 @@
 
 - Clone this repo and enter the directory: `git clone https://github.com/camc8/CaredFor-Interview.git && cd CaredFor-Interview`
 - Install Ionic CLI if it's not already installed: `npm install -g @ionic/cli`
-- CD into the Laravel API directory: `cd api`
+- Enter the Laravel API directory: `cd api`
 - Run `npm install`
 
 ### Setting up Laravel Valet (more info [here](https://laravel.com/docs/10.x/valet))

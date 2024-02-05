@@ -3,14 +3,10 @@
 namespace Tests\Unit;
 
 use App\Models\Appointment;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
 class AppointmentModelTest extends TestCase
 {
-
-    use RefreshDatabase;
-
     /**
      * Test to endure model rows can be inserted.
      */
